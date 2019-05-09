@@ -13,3 +13,19 @@ User & Server
 
     * direct messages
     * broadcast messages
+
+
+Commands;
+
+    login <user> <password>
+    logoff
+
+    msg <user> text....
+    i.e "msg jim Hello World" --->sent
+    jim: "msg guest Hellow World" --->received
+
+    #topic < --- chatroom/group chat
+    join #topic
+    leave #topic
+    send: msg #topic body...
+    recv: msg #topic:<login> body...
