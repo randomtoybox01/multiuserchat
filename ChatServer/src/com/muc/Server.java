@@ -1,11 +1,16 @@
 package com.muc;
-
+/**
+ * @author Cole McGuire
+ */
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class that runs the server and initializes Sockets.
+ */
 public class Server extends Thread {
     private final int serverPort;
 
@@ -20,6 +25,9 @@ public class Server extends Thread {
     }
 
     @Override
+    /**
+     * Starts the Server and ServerWorker
+     */
     public void run() {
         try {
             ServerSocket serverSocket = new ServerSocket(serverPort);
@@ -36,6 +44,10 @@ public class Server extends Thread {
         }
     }
 
+    /**
+     * removes the ServerWorker
+     * @param serverWorker
+     */
     public void removeWorker(ServerWorker serverWorker) {
         workerlist.remove(serverWorker);
     }
